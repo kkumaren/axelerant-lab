@@ -1,0 +1,20 @@
+uuid: 714e620d-a9dd-40d5-9b5e-1c62296ac26c
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - currency_layer_proxy
+    - serialization
+    - user
+id: currency_resource
+plugin_id: currency_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - basic_auth
+    - cookie

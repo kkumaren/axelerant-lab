@@ -1,0 +1,9 @@
+services:
+  currency_layer_proxy:
+    class: Drupal\currency_layer_proxy\CurrencyLayerProxyManager
+    arguments: ['@http_client']
+  cache_context.rest_queries:
+    class: Drupal\currency_layer_proxy\Cache\Context\RestQueriesContext
+    arguments: ['@request_stack']
+    tags:
+      - { name: cache.context }
